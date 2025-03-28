@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakso Mang Usuludin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Halaman Pembuka Full Screen -->
+    <section id="home" class="home">
+        <div class="overlay">
+            <h1 class="title">Bakso Mang Usuludin</h1>
+            <p class="subtitle">Kenyal, Gurih, dan Bikin Ketagihan!</p>
+            <a href="#menu" class="scroll-btn">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu -->
+<section id="menu" class="menu">
+    <h2 data-aos="fade-up">Menu Favorit Kami</h2>
+    <div class="menu-container">
+        <div class="menu-item" data-aos="fade-up">
+            <img src="images/bakso.jpg" alt="Mie Bakso Cincang">
+            <h3>Mie Bakso Cincang</h3>
+            <p>Mie kenyal serta kaldu outentik dengan bakso cincang yang lezat zat zatttt</p>
+            <button onclick="orderWA('Mie Bakso Cincang')">Pesan Sekarang</button>
+        </div>
+        
+        <div class="menu-item" data-aos="fade-up">
+            <img src="images/telur.jpeg" alt="Bakso Telur">
+            <h3>Bakso Telur</h3>
+            <p>Bakso isi telur ayam pilihan dengan kuah kaldu spesial</p>
+            <button onclick="orderWA('Bakso Telur')">Pesan Sekarang</button>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+            <img src="images/ayam.jpeg" alt="Bakso Urat">
+            <h3>Mie ayam</h3>
+            <p>Mie ayam bakso dengan bumbu kenikmatan duniawi</p>
+            <button onclick="orderWA('Mie ayam')">Pesan Sekarang</button>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+            <img src="images/minuman.jpeg" alt="Teh Pucuk">
+            <h3>Minuman</h3>
+            <p>Minuman segar yang cocok dinikmati dengan bakso</p>
+            <button onclick="orderWA('Minuman')">Pesan Sekarang</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Google Maps -->
+<!-- Google Maps -->
+<!-- Google Maps -->
+<section id="maps" style="text-align: center; padding: 20px;">
+    <h2>Lokasi Kami</h2>
+    <div style="max-width: 600px; margin: auto; padding: 20px; border-radius: 10px; 
+                background: rgba(37, 20, 20, 0.474); /* Transparan dengan sedikit putih */
+                backdrop-filter: blur(10px); /* Efek blur */
+                -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);">
+        <p>Yuk, mampir nikmati kelezatan bakso dengan kuah khas yang bikin nagih! Klik peta di bawah untuk melihat lokasi lebih jelas.</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3625.2404236641846!2d107.39280600000001!3d-6.958099000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTcnMjkuMiJTIDEwN8KwMjMnMzQuMSJF!5e1!3m2!1sid!2sid!4v1743168249629!5m2!1sid!2sid" 
+            width="100%" height="300" style="border: none; background: transparent;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <br><br>
+        <a href="https://www.google.com/maps/place/6%C2%B057'29.2%22S+107%C2%B023'34.1%22E" target="_blank" 
+           style="display: inline-block; padding: 10px 15px; background-color: #933131; color: white; text-decoration: none; border-radius: 5px;">
+            Buka di Google Maps
+        </a>
+    </div>
+</section>
+
+
+
+    <!-- Disqus Komentar -->
+    <section id="comments" style="margin-top: 40px;">
+        <h2>Diskusi & Komentar</h2>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  // Gunakan URL halaman saat ini
+                this.page.identifier = window.location.pathname;  // Gunakan path halaman sebagai identifier
+            };
+            (function() { // Jangan edit bagian ini
+                var d = document, s = d.createElement('script');
+                s.src = 'https://bakso-1.disqus.com/embed.js';  // Ganti dengan shortname yang benar
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Silakan aktifkan JavaScript untuk melihat <a href="https://disqus.com/?ref_noscript">komentar yang didukung oleh Disqus.</a></noscript>
+    </section>
+    
+    <!-- Tombol Chat Melayang -->
+    <button id="chatButton" onclick="chatWA()">Ingin buat web?</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+    <script id="dsq-count-scr" src="//bakso-1.disqus.com/count.js" async></script>
+</body>
+</html>
