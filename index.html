@@ -79,23 +79,46 @@
 
 
     <!-- Disqus Komentar -->
-    <section id="comments" style="margin-top: 40px;">
+    <section id="comments" style="margin-top: 40px; text-align: center;">
         <h2>Diskusi & Komentar</h2>
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = window.location.href;  // Gunakan URL halaman saat ini
-                this.page.identifier = window.location.pathname;  // Gunakan path halaman sebagai identifier
-            };
-            (function() { // Jangan edit bagian ini
-                var d = document, s = d.createElement('script');
-                s.src = 'https://bakso-1.disqus.com/embed.js';  // Ganti dengan shortname yang benar
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Silakan aktifkan JavaScript untuk melihat <a href="https://disqus.com/?ref_noscript">komentar yang didukung oleh Disqus.</a></noscript>
+        <div class="disqus-container">
+            <div id="disqus_thread"></div>
+        </div>
     </section>
+    
+    <style>
+        .disqus-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7); /* Putih dengan transparansi */
+            border-radius: 12px; /* Sudut membulat */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+            backdrop-filter: blur(8px); /* Blur latar belakang */
+        }
+    
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+    </style>
+    
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;  // Gunakan URL halaman saat ini
+            this.page.identifier = window.location.pathname;  // Gunakan path halaman sebagai identifier unik
+        };
+    
+        (function() { // Jangan edit bagian ini
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bakso-1.disqus.com/embed.js';  // Ganti dengan shortname yang benar
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    
+    <noscript>Silakan aktifkan JavaScript untuk melihat <a href="https://disqus.com/?ref_noscript">komentar yang didukung oleh Disqus.</a></noscript>
     
     <!-- Tombol Chat Melayang -->
     <button id="chatButton" onclick="chatWA()">Ingin buat web?</button>
